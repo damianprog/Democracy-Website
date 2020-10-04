@@ -1,0 +1,92 @@
+/* 
+    main orange: #f26200;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.wrapper {
+    width: 95%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    background:#f5ecdb;
+    height: 100vh;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 4% 0 4%;
+}
+
+header nav h4 {
+    color: #f26200;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li:first-child a {
+    color: #000;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 35px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #595959;
+    padding: 20px 0;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #000;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 612px;
+}
+
+.header-content h1 {
+    color: #f26200;
+    font-size: 395%;
+    margin: 120px 0 20px 0;
+}
+
+.header-content p {
+    text-align: center;
+    font-size: 112%;
+}
+
+.header-content a {
+    width: 70px;
+    height: 70px;
+    background: #f26200;
+    border-radius: 100px;
+}
+
+.header-content a span {
+    color: #fff;
+    margin: 23px;
+}
