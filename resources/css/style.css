@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+.testimonials .wrapper, .testimonial-header, header nav, .header-content, .principles .wrapper {
+    display: flex;
+}
+
 body {
     background-color: #fff;
     font-family: 'Jost', sans-serif;
@@ -34,15 +38,15 @@ header {
 h2 {
     font-weight: 400;    
     font-size: 200%;
+    margin-bottom: 52px;
 }
 
 header nav {
-    display: flex;
     justify-content: space-between;
     padding-top: 39px;
 }
 
-header nav h4 {
+h4 {
     color: #f26200;
 }
 
@@ -71,7 +75,6 @@ header nav ul li a:hover {
 }
 
 .header-content {
-    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 120px auto 0 auto;
@@ -102,10 +105,6 @@ header nav ul li a:hover {
 .header-content a span {
     color: #fff;
     margin: 23px;
-}
-
-.principles .wrapper {
-    display: flex;
 }
 
 .principles .wrapper div {
@@ -147,6 +146,51 @@ header nav ul li a:hover {
 
 .portfolio-images img:hover {
     transform: scale(1.050);
+}
+
+.testimonials h2 {
+    text-align: center;
+}
+
+.testimonials .wrapper {
+    justify-content: center;
+}
+
+.testimonials .wrapper article {
+    background:#f5ecdb;
+    padding: 30px;
+    margin-right: 30px;
+    color: #757575;
+}
+
+.testimonials .wrapper article:last-child {
+    margin-right: 0;
+}
+
+.testimonial-header img {
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+}
+
+.testimonial-header h4 {
+    font-size: 112%;
+    line-height: 120%;
+    margin-bottom: 8px;
+}
+
+.testimonial-header {
+    align-items: center;
+    height: 74px;
+    margin-bottom: 27px;
+}
+
+.testimonial-header div {
+    margin-right: 10px;
+}
+
+.testimonial-header div span {
+    font-size: 90%;
 }
 
 @media (max-width: 1200px) {
