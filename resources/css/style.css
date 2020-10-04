@@ -31,6 +31,11 @@ header {
     max-height: 812px;
 }
 
+h2 {
+    font-weight: 400;    
+    font-size: 200%;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -69,19 +74,21 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    margin: 120px auto 0 auto;
     max-width: 612px;
+    text-align: center;
 }
 
 .header-content h1 {
     color: #f26200;
     font-size: 395%;
-    margin: 120px 0 20px 0;
+    margin-bottom: 20px;
+    line-height: 130%;
 }
 
 .header-content p {
-    text-align: center;
     font-size: 112%;
+    line-height: 170%;
 }
 
 .header-content a {
@@ -112,7 +119,7 @@ header nav ul li a:hover {
 
 .principles .wrapper div h3 {
     margin: 18px 0;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 130%;
 }
 
@@ -120,4 +127,35 @@ header nav ul li a:hover {
     color: #757575;
     font-size: 103%;
     line-height: 155%;
+}
+
+.portfolio-images {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-images div {
+    overflow: hidden;
+}
+
+.portfolio-images div img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s
+}
+
+.portfolio-images img:hover {
+    transform: scale(1.050);
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        max-width: 930px;
+    }
+
+    .header-content {
+        max-width: 530px;
+        margin-top: 75px;
+    }
 }
