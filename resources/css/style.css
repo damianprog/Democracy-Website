@@ -15,21 +15,26 @@ body {
     font-size: 16px;
 }
 
+section {
+    margin-top: 89px;
+}
+
 .wrapper {
-    width: 95%;
-    max-width: 1400px;
+    width: 88%;
+    max-width: 1110px;
     margin: auto;
 }
 
 header {
     background:#f5ecdb;
     height: 100vh;
+    max-height: 812px;
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
-    padding: 3% 4% 0 4%;
+    padding-top: 39px;
 }
 
 header nav h4 {
@@ -84,9 +89,35 @@ header nav ul li a:hover {
     height: 70px;
     background: #f26200;
     border-radius: 100px;
+    margin-top: 52px;
 }
 
 .header-content a span {
     color: #fff;
     margin: 23px;
+}
+
+.principles .wrapper {
+    display: flex;
+}
+
+.principles .wrapper div {
+    margin-right: 50px;
+}
+
+.principles .wrapper div span {
+    color: #f26200;
+    font-size: 405%;
+}
+
+.principles .wrapper div h3 {
+    margin: 18px 0;
+    font-weight: 500;
+    font-size: 130%;
+}
+
+.principles .wrapper div p {
+    color: #757575;
+    font-size: 103%;
+    line-height: 155%;
 }
