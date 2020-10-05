@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-.testimonials .wrapper, .testimonial-header, header nav, .header-content, .principles .wrapper {
+.testimonials .wrapper, .testimonial-header, header nav, .header-content, .principles .wrapper, .blog-posts-slider, .blog-post-footer {
     display: flex;
 }
 
@@ -116,9 +116,12 @@ header nav ul li a:hover {
     font-size: 405%;
 }
 
+h3 {
+    font-weight: 400;
+}
+
 .principles .wrapper div h3 {
     margin: 18px 0;
-    font-weight: 400;
     font-size: 130%;
 }
 
@@ -138,9 +141,12 @@ header nav ul li a:hover {
     overflow: hidden;
 }
 
-.portfolio-images div img {
+.portfolio-images div img, .blog-posts article img {
     width: 100%;
     display: block;
+}
+
+.portfolio-images div img {
     transition: transform 0.3s
 }
 
@@ -156,18 +162,22 @@ header nav ul li a:hover {
     justify-content: center;
 }
 
-.testimonials .wrapper article {
+.testimonials article {
     background:#f5ecdb;
     padding: 30px;
     margin-right: 30px;
     color: #757575;
 }
 
-.testimonials .wrapper article:last-child {
+.testimonials article p {
+    line-height: 170%;
+}
+
+.testimonials article:last-child {
     margin-right: 0;
 }
 
-.testimonial-header img {
+.testimonial-header img, .blog-posts article .blog-post-footer img {
     width: 65px;
     height: 65px;
     border-radius: 100px;
@@ -176,13 +186,13 @@ header nav ul li a:hover {
 .testimonial-header h4 {
     font-size: 112%;
     line-height: 120%;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
 }
 
 .testimonial-header {
     align-items: center;
     height: 74px;
-    margin-bottom: 27px;
+    margin-bottom: 19px;
 }
 
 .testimonial-header div {
@@ -191,6 +201,82 @@ header nav ul li a:hover {
 
 .testimonial-header div span {
     font-size: 90%;
+}
+
+.blog {
+    background: #f5ecdb;
+}
+
+.blog h2 {
+    padding-top: 52px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.blog p {
+    color: #757575;
+    width: 650px;
+    font-size: 128%;
+    line-height: 165%;
+    margin-bottom: 62px;
+}
+
+.blog-posts {
+    position: relative;
+    height: 440px;
+    overflow: hidden;
+}
+
+.blog-posts-slider {
+    position: absolute;
+    transition: left 3000ms ease;
+    left: 0;
+}
+
+.blog-posts article {
+    flex: 0 0 357px;
+    margin-right: 20px;
+}
+
+.blog-posts article h3 {
+    font-size: 162%;
+}
+
+.blog-posts article h3, .blog-posts article {
+    line-height: 124%;
+}
+
+.blog-posts article .blog-post-img {
+    margin-bottom: 27px;
+}
+
+.blog-posts article .blog-post-footer span {
+    font-size: 90%;
+} 
+
+.blog-posts article .blog-post-footer {
+    line-height: 117%;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.blog-posts article .blog-post-footer img {
+    margin-right: 16px;
+}
+
+.blog-buttons {
+    margin: 76px auto 0 auto;
+    width: 100px;
+}
+
+.blog-buttons span {
+    font-size: 100%;
+    color: #757575;
+    cursor: pointer;
+}
+
+.blog-buttons .prev-btn {
+    color: #f26200;
 }
 
 @media (max-width: 1200px) {
