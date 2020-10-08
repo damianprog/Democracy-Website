@@ -9,8 +9,13 @@
 }
 
 .testimonials .wrapper, .testimonial-header, header nav, .header-content, footer .wrapper,
-.principles .wrapper, .blog-posts-slider, .blog-post-footer, .clients, .footer-items, .footer-logos {
+.principles .wrapper, .blog-posts-slider, .blog-post-author, .clients, .footer-main-contents, .footer-logos {
     display: flex;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -44,13 +49,15 @@ h4 {
 }
 
 .wrapper {
-    width: 88%;
     max-width: 1110px;
     margin: auto;
+    padding: 0 31px;
+    box-sizing: content-box;
 }
 
 header {
     height: 100vh;
+    min-height: 677px;
     max-height: 812px;
 }
 
@@ -71,9 +78,13 @@ header nav ul li:first-child a {
     color: #000;
 }
 
+header nav ul li:last-child {
+    margin-right: 10px;
+}
+
 header nav ul li {
     display: inline-block;
-    margin-right: 35px;
+    margin-right: 34px;
 }
 
 header nav ul li a {
@@ -97,7 +108,7 @@ header nav ul li a:hover {
 .header-content h1 {
     color: #f26200;
     font-size: 395%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 130%;
 }
 
@@ -111,7 +122,7 @@ header nav ul li a:hover {
     height: 70px;
     background: #f26200;
     border-radius: 100px;
-    margin-top: 52px;
+    margin-top: 44px;
 }
 
 .header-content a span {
@@ -186,7 +197,7 @@ header nav ul li a:hover {
     margin-right: 0;
 }
 
-.testimonial-header img, .blog-posts article .blog-post-footer img {
+.testimonial-header img, .blog-posts article .blog-post-author img {
     width: 65px;
     height: 65px;
     border-radius: 100px;
@@ -257,17 +268,17 @@ header nav ul li a:hover {
     margin-bottom: 27px;
 }
 
-.blog-posts article .blog-post-footer span {
+.blog-posts article .blog-post-author span {
     font-size: 90%;
 } 
 
-.blog-posts article .blog-post-footer {
+.blog-posts article .blog-post-author {
     line-height: 117%;
     align-items: center;
     margin-top: 24px;
 }
 
-.blog-posts article .blog-post-footer img {
+.blog-posts article .blog-post-author img {
     margin-right: 16px;
 }
 
@@ -286,12 +297,12 @@ header nav ul li a:hover {
     color: #f26200;
 }
 
-.clients img {
-    margin-right: 30px;
+.clients div {
+    margin: 0 30px 89px 0;
 }
 
-.clients {
-    margin-bottom: 89px;
+.clients div img {
+    width: 100%;
 }
 
 footer .wrapper {
@@ -299,31 +310,32 @@ footer .wrapper {
     flex-direction: column;
 }
 
-.footer-items {
+.footer-main-contents {
     padding: 140px 0 160px 0;
+    align-self: flex-start;
 }
 
-.footer-items div:first-child {
+.footer-main-contents div:first-child {
     width: 245px;
 }
 
-.footer-items div:last-child {
+.footer-main-contents div:last-child {
     margin: 0;
 }
 
-.footer-items div {
+.footer-main-contents div {
     line-height: 155%;
     font-size: 107%;
-    margin-right: 128px;
+    margin-right: 140px;
 }
 
-.footer-items a {
+.footer-main-contents a {
     margin-bottom: 13px;
     display: block;
     transition: 0.3s;
 }
 
-.footer-items a:hover {
+.footer-main-contents a:hover {
     color: #000;
 }
 
@@ -355,11 +367,19 @@ footer .wrapper span {
 
 @media (max-width: 1200px) {
     .wrapper {
-        max-width: 930px;
+        max-width: 917px;
     }
 
     .header-content {
         max-width: 530px;
         margin-top: 75px;
+    }
+
+    .blog-posts article {
+        flex: 0 0 292px;
+    }
+
+    .footer-main-contents div {
+        margin-right: 90px;
     }
 }

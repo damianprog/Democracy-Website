@@ -25,7 +25,7 @@
     }
 
     next = () => {
-        blogPostsSlider.style.left = "-102%";
+        blogPostsSlider.style.left = "calc(-100% - 20px)";
         nextBtn.style.color = "#f26200";
         prevBtn.style.color = "#757575";
         restartSlideInterval();
