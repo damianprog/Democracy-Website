@@ -65,41 +65,37 @@ header, .blog, .testimonials article, footer {
     background:#f5ecdb;
 }
 
-header nav {
+nav {
     justify-content: space-between;
     align-items: center;
     padding-top: 39px;
 }
 
-.hamburger-menu {
+nav li:first-child, nav .menu-icon {
     display: none;
 }
 
-header nav ul {
+nav ul {
     list-style-type: none;
 }
 
-.main-nav li:first-child a {
+nav li:nth-child(2) a, nav li a:hover {
     color: #000;
 }
 
-.main-nav li:last-child {
+nav li:last-child {
     margin-right: 10px;
 }
 
-.main-nav li {
+nav li {
     display: inline-block;
     margin-right: 34px;
 }
 
-.main-nav li a {
+nav li a {
     color: #595959;
     padding: 20px 0;
     transition: 0.3s;
-}
-
-.main-nav li a:hover {
-    color: #000;
 }
 
 .header-content {
@@ -402,21 +398,19 @@ footer .wrapper span {
         display: none;
     }
 
-    .hamburger-menu {
+    nav .menu-icon {
         display: inline-block;
-    }
-
-    .hamburger-menu span {
         color: #f26200;
         font-size: 175%;
         cursor: pointer;
         user-select: none;
     }
 
-    .hamburger-menu div {
+    nav div {
         background: #fff;
         color: #212529;
         padding: 36px 20px 40px 40px;
+        width: 300px;
         font-size: 127%;
         height: 100%;
         position: fixed;
@@ -426,21 +420,28 @@ footer .wrapper span {
         transition: right 400ms ease;
     }
 
-    .hamburger-menu li:first-child {
-        text-align: end;
-        padding: 0 0 0 0;
+    header nav li a {
+        color: #212529;
     }
 
-    .hamburger-menu li:nth-child(2), .hamburger-menu li:hover  {
+    nav li:first-child {
+        display: block;
+        text-align: end;
+        padding: 0;
+    }
+
+    header nav li:nth-child(2) a, nav li a:hover  {
         color: #f26200;
     }
 
-    .hamburger-menu li:first-child span {
+    nav li:first-child span {
         color:#757575;
         font-size: 150%;
+        cursor: pointer;
+        user-select: none;
     }
 
-    .hamburger-menu li {
+    header nav li {
         width: 240px;
         padding: 12px 0;
         transition: 0.3s;
