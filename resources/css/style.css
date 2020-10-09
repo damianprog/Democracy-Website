@@ -67,33 +67,38 @@ header, .blog, .testimonials article, footer {
 
 header nav {
     justify-content: space-between;
+    align-items: center;
     padding-top: 39px;
+}
+
+.hamburger-menu {
+    display: none;
 }
 
 header nav ul {
     list-style-type: none;
 }
 
-header nav ul li:first-child a {
+.main-nav li:first-child a {
     color: #000;
 }
 
-header nav ul li:last-child {
+.main-nav li:last-child {
     margin-right: 10px;
 }
 
-header nav ul li {
+.main-nav li {
     display: inline-block;
     margin-right: 34px;
 }
 
-header nav ul li a {
+.main-nav li a {
     color: #595959;
     padding: 20px 0;
     transition: 0.3s;
 }
 
-header nav ul li a:hover {
+.main-nav li a:hover {
     color: #000;
 }
 
@@ -122,7 +127,7 @@ header nav ul li a:hover {
     height: 70px;
     background: #f26200;
     border-radius: 100px;
-    margin-top: 44px;
+    margin-top: 48px;
 }
 
 .header-content a span {
@@ -134,21 +139,21 @@ header nav ul li a:hover {
     margin-right: 50px;
 }
 
-.principles .wrapper div span {
+.principles span {
     color: #f26200;
     font-size: 405%;
 }
 
-.principles .wrapper div h3 {
+.principles h3 {
     margin: 18px 0;
     font-size: 130%;
 }
 
-.principles .wrapper div p, .testimonials article, .blog p, .blog-buttons span, footer {
+.principles p, .testimonials article, .blog p, .blog-buttons span, footer {
     color: #757575;
 }
 
-.principles .wrapper div p {
+.principles p {
     font-size: 103%;
     line-height: 155%;
 }
@@ -163,7 +168,7 @@ header nav ul li a:hover {
     overflow: hidden;
 }
 
-.portfolio-images div img, .blog-posts article img {
+.portfolio-images img, .blog-posts img {
     width: 100%;
     display: block;
 }
@@ -189,7 +194,7 @@ header nav ul li a:hover {
     margin-right: 30px;
 }
 
-.testimonials article p {
+.testimonials p {
     line-height: 170%;
 }
 
@@ -197,7 +202,7 @@ header nav ul li a:hover {
     margin-right: 0;
 }
 
-.testimonial-header img, .blog-posts article .blog-post-author img {
+.testimonial-header img, .blog-post-author img {
     width: 65px;
     height: 65px;
     border-radius: 100px;
@@ -219,7 +224,7 @@ header nav ul li a:hover {
     margin-right: 10px;
 }
 
-.testimonial-header div span {
+.testimonial-header span {
     font-size: 90%;
 }
 
@@ -256,29 +261,29 @@ header nav ul li a:hover {
     margin-right: 20px;
 }
 
-.blog-posts article h3 {
+.blog-posts h3 {
     font-size: 162%;
 }
 
-.blog-posts article h3, .blog-posts article {
+.blog-posts h3, .blog-posts article {
     line-height: 124%;
 }
 
-.blog-posts article .blog-post-img {
+.blog-post-img {
     margin-bottom: 27px;
 }
 
-.blog-posts article .blog-post-author span {
+.blog-post-author span {
     font-size: 90%;
 } 
 
-.blog-posts article .blog-post-author {
+.blog-post-author {
     line-height: 117%;
     align-items: center;
     margin-top: 24px;
 }
 
-.blog-posts article .blog-post-author img {
+.blog-post-author img {
     margin-right: 16px;
 }
 
@@ -301,7 +306,7 @@ header nav ul li a:hover {
     margin: 0 30px 89px 0;
 }
 
-.clients div img {
+.clients img {
     width: 100%;
 }
 
@@ -353,11 +358,11 @@ footer .wrapper {
     color: #a64300;
 }
 
-.footer-logos .flaticon-twitter {
+.flaticon-twitter {
     margin-top: 3px;
 }
 
-.footer-logos .flaticon-instagram {
+.flaticon-instagram {
     margin-top: 1px;
 }
 
@@ -381,5 +386,72 @@ footer .wrapper span {
 
     .footer-main-contents div {
         margin-right: 90px;
+    }
+}
+
+@media (max-width: 995px) {
+    .wrapper {
+        max-width: 688px;
+    }
+
+    header nav {
+        padding-top: 49px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: inline-block;
+    }
+
+    .hamburger-menu span {
+        color: #f26200;
+        font-size: 175%;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .hamburger-menu div {
+        background: #fff;
+        color: #212529;
+        padding: 36px 20px 40px 40px;
+        font-size: 127%;
+        height: 100%;
+        position: fixed;
+        right: -300px;
+        top: 0;
+        box-shadow: -10px 0 20px -10px rgba(0, 0, 0, 0.1);
+        transition: right 400ms ease;
+    }
+
+    .hamburger-menu li:first-child {
+        text-align: end;
+        padding: 0 0 0 0;
+    }
+
+    .hamburger-menu li:nth-child(2), .hamburger-menu li:hover  {
+        color: #f26200;
+    }
+
+    .hamburger-menu li:first-child span {
+        color:#757575;
+        font-size: 150%;
+    }
+
+    .hamburger-menu li {
+        width: 240px;
+        padding: 12px 0;
+        transition: 0.3s;
+    }
+
+    .header-content {
+        max-width: 676px;
+        margin-top: 83px;
+    }
+
+    .header-content h1 {
+        font-size: 200%;
     }
 }
