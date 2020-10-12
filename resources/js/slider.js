@@ -1,36 +1,14 @@
 (() => {
     const blogPostsSlider = document.querySelector(".blog-posts-slider");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
+    const blogButtons = document.querySelectorAll(".blog-buttons span");
+    let lastClickedButton = blogButtons[0];
 
-    const startSliding = () => {
-        const sliderStyle = getComputedStyle(blogPostsSlider);     
-        const leftValue = sliderStyle.getPropertyValue("left");
-
-        leftValue == "0px" ? next() : prev();
-    };
-
-    let slideInterval = setInterval(startSliding, 10000);
-
-    restartSlideInterval = () => {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(startSliding, 10000);
-    };
-
-    prev = () => {
-        blogPostsSlider.style.left = "0";
-        prevBtn.style.color = "#f26200";
-        nextBtn.style.color = "#757575";
-        restartSlideInterval();
-    }
-
-    next = () => {
-        blogPostsSlider.style.left = "calc(-100% - 20px)";
-        nextBtn.style.color = "#f26200";
-        prevBtn.style.color = "#757575";
-        restartSlideInterval();
-    }
-
-    prevBtn.addEventListener("click", prev);
-    nextBtn.addEventListener("click", next);
+    blogButtons.forEach((button, i) => {
+        button.addEventListener("click", () => {
+            blogPostsSlider.style.left = `calc(${i} * (-100% - 20px))`
+            lastClickedButton.style.color = "#757575";
+            button.style.color = "#f26200";
+            lastClickedButton = button;
+        });
+    });
 })();

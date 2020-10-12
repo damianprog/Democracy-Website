@@ -71,7 +71,8 @@ nav {
     padding-top: 39px;
 }
 
-nav li:first-child, nav .menu-icon {
+nav li:first-child, nav .menu-icon, .blog-buttons span:nth-child(3), .blog-buttons span:nth-child(4),
+.blog-buttons span:nth-child(5), .blog-buttons span:nth-child(6) {
     display: none;
 }
 
@@ -94,8 +95,8 @@ nav li {
 
 nav li a {
     color: #595959;
-    padding: 20px 0;
     transition: 0.3s;
+    display: block;
 }
 
 .header-content {
@@ -213,7 +214,7 @@ nav li a {
 .testimonial-header {
     align-items: center;
     height: 74px;
-    margin-bottom: 19px;
+    margin-bottom: 17px;
 }
 
 .testimonial-header div {
@@ -285,7 +286,7 @@ nav li a {
 
 .blog-buttons {
     margin: 76px auto 0 auto;
-    width: 100px;
+    width: fit-content;
 }
 
 .blog-buttons span {
@@ -294,7 +295,7 @@ nav li a {
     user-select: none;
 }
 
-.blog-buttons .prev-btn {
+.blog-buttons span:first-child {
     color: #f26200;
 }
 
@@ -391,7 +392,7 @@ footer .wrapper span {
     }
 
     header nav {
-        padding-top: 49px;
+        padding-top: 52px;
     }
 
     .main-nav {
@@ -449,10 +450,42 @@ footer .wrapper span {
 
     .header-content {
         max-width: 676px;
-        margin-top: 83px;
+        margin-top: 86px;
     }
 
     .header-content h1 {
         font-size: 200%;
     }
+
+    .principles .wrapper div {
+        margin-right: 32px;
+    }
+
+    .portfolio-images {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .testimonials .wrapper {
+        flex-direction: column;
+    }
+
+    .testimonial-header {
+        justify-content: space-between;
+    }
+
+    .testimonials article {
+        margin: 0;
+    }
+
+    .blog p {
+        width: 395px;
+    }
+
+    .blog-posts article {
+        flex: 0 0 334px;
+    }
+
+    .blog-buttons span:nth-child(3) {
+        display: inline-block;
+    } 
 }
