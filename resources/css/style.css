@@ -9,7 +9,7 @@
 }
 
 .testimonials .wrapper, .testimonial-header, header nav, .header-content, footer .wrapper,
-.principles .wrapper, .blog-posts-slider, .blog-post-author, .clients, .footer-main-contents, .footer-logos {
+.principles .wrapper, .blog-posts-slider, .blog-post-author, .clients .wrapper, .footer-main-contents, .footer-logos {
     display: flex;
 }
 
@@ -51,7 +51,7 @@ h4 {
 .wrapper {
     max-width: 1110px;
     margin: auto;
-    padding: 0 31px;
+    padding: 0 15px;
     box-sizing: content-box;
 }
 
@@ -299,8 +299,12 @@ nav li a {
     color: #f26200;
 }
 
-.clients div {
-    margin: 0 30px 89px 0;
+.clients {
+    margin-bottom: 89px;
+}
+
+.clients .wrapper div {
+    margin-right: 30px;
 }
 
 .clients img {
@@ -317,18 +321,20 @@ footer .wrapper {
     align-self: flex-start;
 }
 
-.footer-main-contents div:first-child {
-    width: 245px;
-}
-
-.footer-main-contents div:last-child {
+.footer-main-contents div:last-child, .clients .wrapper div:last-child {
     margin: 0;
 }
 
 .footer-main-contents div {
     line-height: 155%;
     font-size: 107%;
-    margin-right: 140px;
+    flex: 0 1 245px;
+    padding: 0 15px;
+}
+
+.footer-main-contents div:first-child {
+    margin-right: 95px;
+    flex: 0 1 285px;
 }
 
 .footer-main-contents a {
@@ -343,7 +349,7 @@ footer .wrapper {
 
 .footer-logos {
     color: #f26200;
-    padding-bottom: 60px;
+    padding: 0 25px 60px 0;
 }
 
 .footer-logos a {
@@ -364,7 +370,7 @@ footer .wrapper {
 }
 
 footer .wrapper span {
-    padding: 0 0 75px 25px;
+    padding-bottom: 75px;
 }
 
 @media (max-width: 1200px) {
@@ -381,8 +387,8 @@ footer .wrapper span {
         flex: 0 0 292px;
     }
 
-    .footer-main-contents div {
-        margin-right: 90px;
+    .footer-main-contents div:first-child {
+        margin-right: 80px;
     }
 }
 
@@ -486,6 +492,95 @@ footer .wrapper span {
     }
 
     .blog-buttons span:nth-child(3) {
+        display: inline-block;
+    } 
+
+    .footer-main-contents div:first-child {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        max-width: 510px;
+    }
+
+    .header-content {
+        margin-top: 71px;
+    }
+
+    .principles .wrapper {
+        flex-direction: column;
+    }
+
+    .principles .wrapper div {
+        margin: 0 0 20px 0;
+    }
+
+    .blog-posts article {
+        flex: 0 0 245px;
+    }
+
+    .clients .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clients .wrapper div {
+        margin: 0;
+        max-width: 195px;
+    }
+
+    .footer-main-contents {
+        flex-direction: column;
+        padding: 75px 0 58px 0;
+    }
+
+    .wrapper .footer-main-contents div {
+        flex: 0 0 auto;
+        padding: 7px 0;
+    }
+}
+
+@media (max-width: 590px) {
+    section {
+        margin-top: 45px;
+    }
+
+    nav {
+        padding: 52px 16px 0 16px;
+    }
+
+    .portfolio .wrapper {
+        padding: 0;
+    }
+
+    .portfolio h2 {
+        margin-left: 15px;
+    }
+
+    .portfolio-images {
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+    }
+
+    .blog {
+        padding-top: 36px;
+    }
+
+    .blog-posts-slider {
+        width: calc((100% * 6) + 100px);
+    }
+
+    .blog-posts-slider article {
+        flex: 0 0 calc((100% - 100px) / 6);
+    }
+
+    .blog-posts {
+        height: 541px;
+    }
+
+    .blog-buttons span:nth-child(4), .blog-buttons span:nth-child(5), .blog-buttons span:nth-child(6) {
         display: inline-block;
     } 
 }
