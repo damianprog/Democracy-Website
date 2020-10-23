@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-.testimonials .wrapper, .testimonial-header, header nav, .header-content, footer .wrapper,
+.testimonials .wrapper, .testimonial-header, .main-header nav, .header-content, footer .wrapper,
 .principles .wrapper, .blog-posts-slider, .blog-post-author, .clients .wrapper, .footer-main-contents, .footer-logos {
     display: flex;
 }
@@ -55,45 +55,45 @@ h4 {
     box-sizing: content-box;
 }
 
-header {
+.main-header {
     height: 100vh;
     min-height: 677px;
     max-height: 812px;
 }
 
-header, .blog, .testimonials article, footer {
+.main-header, .blog, .testimonials article, footer {
     background:#f5ecdb;
 }
 
-nav {
+.main-header nav {
     justify-content: space-between;
     align-items: center;
     padding-top: 39px;
 }
 
-nav li:first-child, nav .menu-icon, .blog-buttons span:nth-child(3), .blog-buttons span:nth-child(4),
+.main-header li:first-child, .main-header .menu-icon, .blog-buttons span:nth-child(3), .blog-buttons span:nth-child(4),
 .blog-buttons span:nth-child(5), .blog-buttons span:nth-child(6) {
     display: none;
 }
 
-nav ul {
+.main-header ul {
     list-style-type: none;
 }
 
-nav li:nth-child(2) a, nav li a:hover {
+.main-header li:nth-child(2) a, .main-header li a:hover {
     color: #000;
 }
 
-nav li:last-child {
+.main-header li:last-child {
     margin-right: 10px;
 }
 
-nav li {
+.main-header li {
     display: inline-block;
     margin-right: 34px;
 }
 
-nav li a {
+.main-header li a {
     color: #595959;
     transition: 0.3s;
     display: block;
@@ -397,15 +397,11 @@ footer .wrapper span {
         max-width: 688px;
     }
 
-    header nav {
+    .main-header nav {
         padding-top: 52px;
     }
 
-    .main-nav {
-        display: none;
-    }
-
-    nav .menu-icon {
+    .main-header .menu-icon {
         display: inline-block;
         color: #f26200;
         font-size: 175%;
@@ -413,7 +409,7 @@ footer .wrapper span {
         user-select: none;
     }
 
-    nav div {
+    .main-header nav div {
         background: #fff;
         color: #212529;
         padding: 36px 20px 40px 40px;
@@ -427,28 +423,28 @@ footer .wrapper span {
         transition: right 400ms ease;
     }
 
-    header nav li a {
+    .main-header nav li a {
         color: #212529;
     }
 
-    nav li:first-child {
+    .main-header nav li:first-child {
         display: block;
         text-align: end;
         padding: 0;
     }
 
-    header nav li:nth-child(2) a, nav li a:hover  {
+    .main-header nav li:nth-child(2) a, .main-header nav li a:hover  {
         color: #f26200;
     }
 
-    nav li:first-child span {
+    .main-header nav li:first-child span {
         color:#757575;
         font-size: 150%;
         cursor: pointer;
         user-select: none;
     }
 
-    header nav li {
+    .main-header nav li {
         width: 240px;
         padding: 12px 0;
         transition: 0.3s;
@@ -547,7 +543,7 @@ footer .wrapper span {
         margin-top: 45px;
     }
 
-    nav {
+    .main-header nav {
         padding: 52px 16px 0 16px;
     }
 
